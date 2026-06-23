@@ -40,3 +40,14 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Python / FastAPI Backend
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+backend/uploads/*
+!backend/uploads/.gitkeep
+.firebase/
+
+

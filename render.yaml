@@ -1,0 +1,16 @@
+services:
+  # FastAPI backend Docker service
+  - type: web
+    name: lostai-backend
+    env: docker
+    dockerfilePath: Dockerfile
+    dockerContext: backend
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: "https://lostai.web.app,http://localhost:4200"
+      - key: API_BASE_URL
+        value: "https://lostai-api.onrender.com"
+    disk:
+      name: uploads-storage
+      mountPath: /app/uploads
+      sizeGB: 1
