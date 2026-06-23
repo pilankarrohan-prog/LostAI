@@ -10,7 +10,7 @@ services:
       - key: ALLOWED_ORIGINS
         value: "https://lostai.web.app,http://localhost:4200"
       - key: API_BASE_URL
-        value: "https://lostai-api.onrender.com"
+        value: "https://lostai-backend.onrender.com"
     disk:
       name: uploads-storage
       mountPath: /app/uploads
