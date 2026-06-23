@@ -5,6 +5,7 @@ services:
     env: docker
     dockerfilePath: Dockerfile
     dockerContext: backend
+    healthCheckPath: /healthz
     envVars:
       - key: ALLOWED_ORIGINS
         value: "https://lostai.web.app,http://localhost:4200"

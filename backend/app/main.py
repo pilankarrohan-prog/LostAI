@@ -153,6 +153,11 @@ def get_root():
     }
 
 
+@app.get("/healthz")
+def health_check():
+    return {"status": "ok"}
+
+
 @app.post("/upload")
 async def upload_file(file: UploadFile = File(...)):
     # 1. Save file locally

@@ -16,6 +16,12 @@ def test_api_flow():
 
     print("Running Backend REST API flow tests...")
 
+    # 0. Health Check Endpoint Test
+    health_response = client.get("/healthz")
+    assert health_response.status_code == 200
+    assert health_response.json() == {"status": "ok"}
+    print("[OK] Success: Health Check endpoint is functional!")
+
     # 1. Create a dummy image in memory
     img = Image.new('RGB', (100, 100), color='red')
     img_byte_arr = io.BytesIO()
