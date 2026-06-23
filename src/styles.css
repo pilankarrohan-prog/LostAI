@@ -448,3 +448,50 @@ textarea.form-control {
     transform: translateY(0);
   }
 }
+
+/* Modern Auth Form Styles */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.modern-input {
+  width: 100%;
+  height: 56px;
+  border-radius: 14px;
+  padding: 0 16px;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, .08);
+  color: white;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.modern-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, .15);
+  outline: none;
+}
+
+.modern-input.is-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15) !important;
+}
+
+body.light-mode .modern-input {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+body.light-mode .modern-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+body.light-mode .modern-input.is-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15) !important;
+}
+

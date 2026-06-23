@@ -42,26 +42,20 @@ import { AuthService } from '../../core/services/auth.service';
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
               
               <!-- Name -->
-              <div class="mb-3">
+              <div class="form-field mb-3">
                 <label class="form-label small" for="name">Full Name</label>
-                <div class="input-group-custom">
-                  <span class="input-group-icon"><i class="bi bi-person"></i></span>
-                  <input type="text" id="name" formControlName="name" class="form-control" placeholder="John Doe"
-                    [class.is-invalid]="submitted && f['name'].errors">
-                </div>
+                <input type="text" id="name" formControlName="name" class="modern-input" placeholder="John Doe"
+                  [class.is-invalid]="submitted && f['name'].errors">
                 <div *ngIf="submitted && f['name'].errors" class="invalid-feedback d-block small mt-1">
                   <span *ngIf="f['name'].errors['required']">Full Name is required.</span>
                 </div>
               </div>
 
               <!-- Email -->
-              <div class="mb-3">
+              <div class="form-field mb-3">
                 <label class="form-label small" for="email">Email Address</label>
-                <div class="input-group-custom">
-                  <span class="input-group-icon"><i class="bi bi-envelope"></i></span>
-                  <input type="email" id="email" formControlName="email" class="form-control" placeholder="john@example.com"
-                    [class.is-invalid]="submitted && f['email'].errors">
-                </div>
+                <input type="email" id="email" formControlName="email" class="modern-input" placeholder="john@example.com"
+                  [class.is-invalid]="submitted && f['email'].errors">
                 <div *ngIf="submitted && f['email'].errors" class="invalid-feedback d-block small mt-1">
                   <span *ngIf="f['email'].errors['required']">Email is required.</span>
                   <span *ngIf="f['email'].errors['email']">Please enter a valid email address.</span>
@@ -69,26 +63,20 @@ import { AuthService } from '../../core/services/auth.service';
               </div>
 
               <!-- Phone -->
-              <div class="mb-3">
+              <div class="form-field mb-3">
                 <label class="form-label small" for="phone">Phone Number</label>
-                <div class="input-group-custom">
-                  <span class="input-group-icon"><i class="bi bi-telephone"></i></span>
-                  <input type="text" id="phone" formControlName="phone" class="form-control" placeholder="+1 (555) 012-3456"
-                    [class.is-invalid]="submitted && f['phone'].errors">
-                </div>
+                <input type="text" id="phone" formControlName="phone" class="modern-input" placeholder="+1 (555) 012-3456"
+                  [class.is-invalid]="submitted && f['phone'].errors">
                 <div *ngIf="submitted && f['phone'].errors" class="invalid-feedback d-block small mt-1">
                   <span *ngIf="f['phone'].errors['required']">Phone number is required.</span>
                 </div>
               </div>
 
               <!-- Password -->
-              <div class="mb-3">
+              <div class="form-field mb-3">
                 <label class="form-label small" for="password">Password</label>
-                <div class="input-group-custom">
-                  <span class="input-group-icon"><i class="bi bi-lock"></i></span>
-                  <input type="password" id="password" formControlName="password" class="form-control" placeholder="••••••••"
-                    [class.is-invalid]="submitted && f['password'].errors">
-                </div>
+                <input type="password" id="password" formControlName="password" class="modern-input" placeholder="••••••••"
+                  [class.is-invalid]="submitted && f['password'].errors">
                 <div *ngIf="submitted && f['password'].errors" class="invalid-feedback d-block small mt-1">
                   <span *ngIf="f['password'].errors['required']">Password is required.</span>
                   <span *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters.</span>
@@ -96,13 +84,10 @@ import { AuthService } from '../../core/services/auth.service';
               </div>
 
               <!-- Confirm Password -->
-              <div class="mb-4">
+              <div class="form-field mb-4">
                 <label class="form-label small" for="confirmPassword">Confirm Password</label>
-                <div class="input-group-custom">
-                  <span class="input-group-icon"><i class="bi bi-lock-fill"></i></span>
-                  <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="••••••••"
-                    [class.is-invalid]="submitted && registerForm.hasError('mismatch')">
-                </div>
+                <input type="password" id="confirmPassword" formControlName="confirmPassword" class="modern-input" placeholder="••••••••"
+                  [class.is-invalid]="submitted && registerForm.hasError('mismatch')">
                 <div *ngIf="submitted && registerForm.hasError('mismatch')" class="invalid-feedback d-block small mt-1">
                   Passwords do not match.
                 </div>

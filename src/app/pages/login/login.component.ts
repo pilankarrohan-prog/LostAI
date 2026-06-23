@@ -41,13 +41,10 @@ import { AuthService } from '../../core/services/auth.service';
             <!-- Form -->
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <!-- Email -->
-              <div class="mb-3">
+              <div class="form-field mb-3">
                 <label class="form-label small" for="email">Email Address</label>
-                <div class="input-group-custom">
-                  <span class="input-group-icon"><i class="bi bi-envelope"></i></span>
-                  <input type="email" id="email" formControlName="email" class="form-control" placeholder="name@example.com"
-                    [class.is-invalid]="submitted && f['email'].errors">
-                </div>
+                <input type="email" id="email" formControlName="email" class="modern-input" placeholder="name@example.com"
+                  [class.is-invalid]="submitted && f['email'].errors">
                 <div *ngIf="submitted && f['email'].errors" class="invalid-feedback d-block small mt-1">
                   <span *ngIf="f['email'].errors['required']">Email is required.</span>
                   <span *ngIf="f['email'].errors['email']">Please enter a valid email address.</span>
@@ -55,16 +52,13 @@ import { AuthService } from '../../core/services/auth.service';
               </div>
 
               <!-- Password -->
-              <div class="mb-4">
+              <div class="form-field mb-4">
                 <div class="d-flex justify-content-between mb-1">
                   <label class="form-label small mb-0" for="password">Password</label>
                   <a class="small text-decoration-none text-cyan" style="cursor: pointer;">Forgot Password?</a>
                 </div>
-                <div class="input-group-custom">
-                  <span class="input-group-icon"><i class="bi bi-lock"></i></span>
-                  <input type="password" id="password" formControlName="password" class="form-control" placeholder="••••••••"
-                    [class.is-invalid]="submitted && f['password'].errors">
-                </div>
+                <input type="password" id="password" formControlName="password" class="modern-input" placeholder="••••••••"
+                  [class.is-invalid]="submitted && f['password'].errors">
                 <div *ngIf="submitted && f['password'].errors" class="invalid-feedback d-block small mt-1">
                   <span *ngIf="f['password'].errors['required']">Password is required.</span>
                   <span *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters.</span>
