@@ -44,8 +44,8 @@ import { User } from '../../core/models/user.model';
           <div class="col-lg-6">
             <div class="row g-2">
               <div class="col-7">
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted py-1.5"><i class="bi bi-search"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-search"></i></span>
                   <input type="text" class="form-control py-1.5" placeholder="Search my reports..." [(ngModel)]="searchQuery" (input)="onFilter()">
                 </div>
               </div>

@@ -21,13 +21,11 @@ interface EnrichedConversation extends Conversation {
     <div class="chat-sidebar h-100 d-flex flex-column">
       <!-- Search Box -->
       <div class="p-3 border-bottom border-secondary">
-        <div class="input-group">
-          <span class="input-group-text bg-dark border-secondary border-end-0 text-muted">
-            <i class="bi bi-search"></i>
-          </span>
+        <div class="input-group-custom">
+          <span class="input-group-icon"><i class="bi bi-search"></i></span>
           <input 
             type="text" 
-            class="form-control bg-dark border-secondary border-start-0 ps-0 text-white" 
+            class="form-control bg-dark border-secondary text-white" 
             placeholder="Search conversations..." 
             [(ngModel)]="searchQuery"
             (ngModelChange)="filterConversations()"

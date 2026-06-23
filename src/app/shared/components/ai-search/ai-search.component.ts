@@ -15,11 +15,13 @@ import { AISearchResultItem } from '../../../core/models/item.model';
       <p class="text-muted small mb-4">Describe the item you are looking for in natural language. Our AI will semantically match your description against our database.</p>
       
       <div class="input-group mb-3 ai-search-input">
-        <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
-        <input type="text" class="form-control bg-dark text-white border-secondary" 
-               placeholder="e.g. 'I lost a black Samsung phone near the library'"
-               [(ngModel)]="searchQuery"
-               (keyup.enter)="onSearch()">
+        <div class="input-group-custom">
+          <span class="input-group-icon"><i class="bi bi-search"></i></span>
+          <input type="text" class="form-control bg-dark text-white border-secondary" 
+                 placeholder="e.g. 'I lost a black Samsung phone near the library'"
+                 [(ngModel)]="searchQuery"
+                 (keyup.enter)="onSearch()">
+        </div>
         <button class="btn btn-primary-gradient px-4" type="button" (click)="onSearch()" [disabled]="isLoading">
           <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2"></span>
           {{ isLoading ? 'Searching...' : 'Search' }}

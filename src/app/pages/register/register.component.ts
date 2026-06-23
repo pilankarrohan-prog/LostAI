@@ -16,7 +16,18 @@ import { AuthService } from '../../core/services/auth.service';
             
             <!-- Header -->
             <div class="text-center mb-4">
-              <i class="bi bi-shield-shaded text-gradient-ai display-5 mb-2"></i>
+              <svg class="mb-3 animate-bounce" width="56" height="56" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));">
+                <defs>
+                  <linearGradient id="lostai-logo-reg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8b5cf6" />
+                    <stop offset="50%" stop-color="#d946ef" />
+                    <stop offset="100%" stop-color="#06b6d4" />
+                  </linearGradient>
+                </defs>
+                <path d="M50 10 C68 10 82 22 82 40 C82 62 50 90 50 90 C50 90 18 62 18 40 C18 22 32 10 50 10 Z" stroke="url(#lostai-logo-reg-grad)" stroke-width="8" stroke-linejoin="round" />
+                <path d="M50 25 C58 25 66 30 66 40 C66 52 50 72 50 72 C50 72 34 52 34 40 C34 30 42 25 50 25 Z" fill="url(#lostai-logo-reg-grad)" />
+                <circle cx="50" cy="42" r="6" fill="#ffffff" />
+              </svg>
               <h2 class="text-white fw-bold">Create Account</h2>
               <p class="text-muted small">Join LostAI to start tracking and matching missing items instantly</p>
             </div>
@@ -33,8 +44,8 @@ import { AuthService } from '../../core/services/auth.service';
               <!-- Name -->
               <div class="mb-3">
                 <label class="form-label small" for="name">Full Name</label>
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-person"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-person"></i></span>
                   <input type="text" id="name" formControlName="name" class="form-control" placeholder="John Doe"
                     [class.is-invalid]="submitted && f['name'].errors">
                 </div>
@@ -46,8 +57,8 @@ import { AuthService } from '../../core/services/auth.service';
               <!-- Email -->
               <div class="mb-3">
                 <label class="form-label small" for="email">Email Address</label>
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-envelope"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-envelope"></i></span>
                   <input type="email" id="email" formControlName="email" class="form-control" placeholder="john@example.com"
                     [class.is-invalid]="submitted && f['email'].errors">
                 </div>
@@ -60,8 +71,8 @@ import { AuthService } from '../../core/services/auth.service';
               <!-- Phone -->
               <div class="mb-3">
                 <label class="form-label small" for="phone">Phone Number</label>
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-telephone"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-telephone"></i></span>
                   <input type="text" id="phone" formControlName="phone" class="form-control" placeholder="+1 (555) 012-3456"
                     [class.is-invalid]="submitted && f['phone'].errors">
                 </div>
@@ -73,8 +84,8 @@ import { AuthService } from '../../core/services/auth.service';
               <!-- Password -->
               <div class="mb-3">
                 <label class="form-label small" for="password">Password</label>
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-lock"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-lock"></i></span>
                   <input type="password" id="password" formControlName="password" class="form-control" placeholder="••••••••"
                     [class.is-invalid]="submitted && f['password'].errors">
                 </div>
@@ -87,8 +98,8 @@ import { AuthService } from '../../core/services/auth.service';
               <!-- Confirm Password -->
               <div class="mb-4">
                 <label class="form-label small" for="confirmPassword">Confirm Password</label>
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-lock-fill"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-lock-fill"></i></span>
                   <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="••••••••"
                     [class.is-invalid]="submitted && registerForm.hasError('mismatch')">
                 </div>

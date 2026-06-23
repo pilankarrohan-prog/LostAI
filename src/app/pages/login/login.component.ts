@@ -16,7 +16,18 @@ import { AuthService } from '../../core/services/auth.service';
             
             <!-- Header -->
             <div class="text-center mb-4">
-              <i class="bi bi-shield-shaded text-gradient-ai display-5 mb-2"></i>
+              <svg class="mb-3 animate-bounce" width="56" height="56" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.5));">
+                <defs>
+                  <linearGradient id="lostai-logo-login-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8b5cf6" />
+                    <stop offset="50%" stop-color="#d946ef" />
+                    <stop offset="100%" stop-color="#06b6d4" />
+                  </linearGradient>
+                </defs>
+                <path d="M50 10 C68 10 82 22 82 40 C82 62 50 90 50 90 C50 90 18 62 18 40 C18 22 32 10 50 10 Z" stroke="url(#lostai-logo-login-grad)" stroke-width="8" stroke-linejoin="round" />
+                <path d="M50 25 C58 25 66 30 66 40 C66 52 50 72 50 72 C50 72 34 52 34 40 C34 30 42 25 50 25 Z" fill="url(#lostai-logo-login-grad)" />
+                <circle cx="50" cy="42" r="6" fill="#ffffff" />
+              </svg>
               <h2 class="text-white fw-bold">Welcome Back</h2>
               <p class="text-muted small">Sign in to report items and review your AI matches</p>
             </div>
@@ -32,8 +43,8 @@ import { AuthService } from '../../core/services/auth.service';
               <!-- Email -->
               <div class="mb-3">
                 <label class="form-label small" for="email">Email Address</label>
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-envelope"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-envelope"></i></span>
                   <input type="email" id="email" formControlName="email" class="form-control" placeholder="name@example.com"
                     [class.is-invalid]="submitted && f['email'].errors">
                 </div>
@@ -49,8 +60,8 @@ import { AuthService } from '../../core/services/auth.service';
                   <label class="form-label small mb-0" for="password">Password</label>
                   <a class="small text-decoration-none text-cyan" style="cursor: pointer;">Forgot Password?</a>
                 </div>
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-lock"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-lock"></i></span>
                   <input type="password" id="password" formControlName="password" class="form-control" placeholder="••••••••"
                     [class.is-invalid]="submitted && f['password'].errors">
                 </div>

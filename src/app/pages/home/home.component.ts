@@ -70,8 +70,8 @@ import { LostFoundItem } from '../../core/models/item.model';
           <div class="col-xl-7 col-lg-12">
             <div class="row g-2">
               <div class="col-md-5">
-                <div class="input-group">
-                  <span class="input-group-text bg-dark border-secondary text-muted py-1.5"><i class="bi bi-search"></i></span>
+                <div class="input-group-custom">
+                  <span class="input-group-icon"><i class="bi bi-search"></i></span>
                   <input type="text" class="form-control py-1.5" placeholder="Search keywords..." [(ngModel)]="searchQuery" (input)="onSearch()">
                 </div>
               </div>

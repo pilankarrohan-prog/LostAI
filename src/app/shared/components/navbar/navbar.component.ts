@@ -19,7 +19,18 @@ import { NotificationDropdownComponent } from '../notification-dropdown/notifica
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" routerLink="/">
-          <i class="bi bi-shield-shaded text-gradient-ai fs-3 me-2"></i>
+          <svg class="me-2" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.45));">
+            <defs>
+              <linearGradient id="lostai-logo-nav-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" />
+                <stop offset="50%" stop-color="#d946ef" />
+                <stop offset="100%" stop-color="#06b6d4" />
+              </linearGradient>
+            </defs>
+            <path d="M50 10 C68 10 82 22 82 40 C82 62 50 90 50 90 C50 90 18 62 18 40 C18 22 32 10 50 10 Z" stroke="url(#lostai-logo-nav-grad)" stroke-width="8" stroke-linejoin="round" />
+            <path d="M50 25 C58 25 66 30 66 40 C66 52 50 72 50 72 C50 72 34 52 34 40 C34 30 42 25 50 25 Z" fill="url(#lostai-logo-nav-grad)" />
+            <circle cx="50" cy="42" r="6" fill="#ffffff" />
+          </svg>
           <span class="fw-extrabold text-white tracking-wide fs-4">Lost<span class="text-gradient-primary">AI</span></span>
         </a>
 
