@@ -1,4 +1,5 @@
 # Use an official Python runtime as a parent image
+# Render deployment build dependencies updated
 FROM python:3.10-slim
 
 # Install system dependencies required for OpenCV
